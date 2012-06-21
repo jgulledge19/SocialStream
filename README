@@ -1,0 +1,9 @@
+SocialStream for MODX Revolution
+
+Orginally created June 2011
+
+This extra can pull in streams from many different accounts and save them to a DB.
+You can then customize the output.  It is also easy to extend to add other streams.
+
+At this moment I don't plan to package and release in the MODX Extras, but you would 
+be more then welcome to do so. 

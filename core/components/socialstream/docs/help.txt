@@ -1,0 +1,26 @@
+Adding accounts: Twitter, RSS, YouTube, Facebook and FacebookSearch
+
+All accounts
+Select the service you want to use
+Add the name, this can be whatever you want to show up in the public feed
+Add a description
+Add a URL that you want this account to go to.
+
+
+Twitter account
+username - this is the Twitter username
+
+Facebook account
+username - the facebook username
+RSS url - should be in this format: http://www.facebook.com/feeds/page.php?id=120723647958593&format=atom10  The id= is the account user id.
+
+Facebook Search
+username - The username is the search term
+
+RSS account
+username - $xml->channel->title
+RSS url - the actual RSS feed
+
+YouTube account
+username - the YouTube username
+RSS url - the YouTube account RSS feed 

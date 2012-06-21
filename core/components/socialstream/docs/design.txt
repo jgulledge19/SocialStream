@@ -1,0 +1,71 @@
+
+Logic
+1. Store all feed(RSS) types that we want to use via: id, url, type (FB, Twitter, ect), user, user_id
+2. Loop thourgh all feeds retrieve and store data in table as: feed_id, title, user, time, like_count, 
+    message, type(text, video, pictures), other?
+3.  Set perms - Always allow, pending, never allow
+
+
+
+
+
+Database
+- social_accounts (table)
+    columns: id, username, service, auto_approve, created_date, active, get_feeds, name, description, 
+        feed_url, public_url, likes, dislikes, followers
+    get_date (int)
+
+- social_feeds (table)
+    columns: id, social_account_id, username, service, post_date(int), feed, html_feed, status, post_url,
+            author, email, copyright, likes, dislikes, followers
+    post_id(the sevice post id varchar32), source
+
+
+Facebook Notifications: 
+    http://developers.facebook.com/docs/reference/fql/notification/
+    http://jamesflores.net/blog/2010/08/how-to-get-your-facebook-status-updates-as-an-rss-feed.html
+  
+http://www.facebook.com/feeds/status.php?id=22839919973&viewer=545520483&key=AWgKs4-UHJoXxAee&format=rss20
+http://www.facebook.com/feeds/page.php?id=22839919973&format=atom
+http://www.facebook.com/feeds/notifications.php?id=22839919973&viewer=545520483&key=AWgKs4-UHJoXxAee&format=rss20
+
+Feeds:
+    http://www.facebook.com/feeds/page.php?id=22839919973&format=atom10
+    http://www.facebook.com/feeds/page.php?id=22839919973&format=atom10
+    old: http://blog.jylin.com/2009/10/01/loading-wall-posts-using-facebookstream_get/
+    
+Facebook search: 
+    http://graph.facebook.com/search?q=Bethel%20College
+    http://stackoverflow.com/questions/3417868/get-data-from-a-facebook-page-wall-or-group-wall-for-use-on-personal-website
+
+Facebook API: 
+    https://developers.facebook.com/blog/post/509/
+    http://developers.facebook.com/docs/samples/
+
+http://mashable.com/2009/04/27/facebook-open-stream-api-the-next-huge-platform/
+http://mashable.com/2009/05/25/twitter-to-facebook/
+
+Postrank: http://bergie.iki.fi/blog/want_to_do_something_similar_to_postrank/
+
+
+
+
+----------------------------------
+From LifeStream - to much code!
+ - broke down /inc/core.php to
+    /classes/
+            {className}.class.php
+ - 
+ 
+Goals
+1. Get a twitter feed(follow)
+
+
+Logic
+1. Get feeds every X minutes
+2. Load feeds into DB table(s)
+3. Assign feeds as approved if from approved people else mark as unapproved
+4. Send out email(s) of pending social streams
+
+Snippet Logic
+1. Reload feeds every X minutes
